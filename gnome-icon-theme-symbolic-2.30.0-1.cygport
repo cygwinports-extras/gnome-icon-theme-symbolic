@@ -1,0 +1,7 @@
+inherit gnome2
+
+src_compile() {
+	cd ${B}
+	cygconf
+	cygmake render
+}
