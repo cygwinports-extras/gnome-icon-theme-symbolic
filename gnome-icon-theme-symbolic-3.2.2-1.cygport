@@ -1,0 +1,15 @@
+inherit gnome2
+
+
+DIFF_EXCLUDES="Makefile"
+
+src_compile() {
+	cd ${S}
+	cygconf
+	cygmake render
+}
+
+src_install() {
+	cd ${S}
+	cyginstall
+}
